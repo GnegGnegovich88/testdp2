@@ -1,3 +1,10 @@
+freerdp2 (2.8.1+dfsg1-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+    - Fixes CVE-2022-39282, CVE-2022-39283.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Wed, 12 Oct 2022 23:25:30 +0200
+
 freerdp2 (2.8.0+dfsg1-1) unstable; urgency=medium
 
   * New upstream version. (Closes: #1016491).
