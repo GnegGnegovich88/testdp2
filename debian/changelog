@@ -1,4 +1,4 @@
-freerdp2 (2.9.0+dfsg1-1) UNRELEASED; urgency=medium
+freerdp2 (2.9.0+dfsg1-1) unstable; urgency=medium
 
   * New upstream release. (Closes: #1024511).
     - CVE-2022-39316: Resolve out of bound read in ZGFX decoder component.
@@ -12,8 +12,15 @@ freerdp2 (2.9.0+dfsg1-1) UNRELEASED; urgency=medium
     - CVE-2022-39347: Resolve missing path canonicalization and base path check
       for `drive` channel.
     - CVE-2022-41877: Resolv missing input length validation in `drive` channel.
+    - Test if packages' executables can be run without 'undefined symbol:
+      winpr_PathMakePath' error. (Closes: #1024758).
+  * debian/copyright:
+    + Update auto-generated copyright.in file.
+    + Update copyright attributions.
+  * debian/*.symbols:
+    + Update .symbols files.
 
- -- Mike Gabriel <sunweaver@debian.org>  Mon, 28 Nov 2022 08:53:31 +0100
+ -- Mike Gabriel <sunweaver@debian.org>  Mon, 28 Nov 2022 09:51:57 +0100
 
 freerdp2 (2.8.1+dfsg1-1) unstable; urgency=medium
 
