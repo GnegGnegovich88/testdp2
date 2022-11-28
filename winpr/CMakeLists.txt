@@ -57,7 +57,7 @@ if (NOT WIN32)
 endif()
 
 # Soname versioning
-set(RAW_VERSION_STRING "2.8.1")
+set(RAW_VERSION_STRING "2.9.0")
 if(EXISTS "${CMAKE_SOURCE_DIR}/.source_tag")
 	file(READ ${CMAKE_SOURCE_DIR}/.source_tag RAW_VERSION_STRING)
 elseif(USE_VERSION_FROM_GIT_TAG)
@@ -82,6 +82,8 @@ else()
 	set(WINPR_VERSION_FULL "${WINPR_VERSION}")
 endif()
 
+option(WITH_INTERNAL_MD4 "Use compiled in md4 hash functions instead of OpenSSL/MBedTLS" OFF)
+option(WITH_INTERNAL_MD5 "Use compiled in md5 hash functions instead of OpenSSL/MBedTLS" OFF)
 if(NOT IOS)
 	check_include_files(stdbool.h WINPR_HAVE_STDBOOL_H)
 	check_include_files(stdint.h WINPR_HAVE_STDINT_H)
