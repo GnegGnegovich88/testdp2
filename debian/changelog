@@ -1,3 +1,20 @@
+freerdp2 (2.9.0+dfsg1-1) UNRELEASED; urgency=medium
+
+  * New upstream release. (Closes: #1024511).
+    - CVE-2022-39316: Resolve out of bound read in ZGFX decoder component.
+    - CVE-2022-39317: Resolve missing a range check for input offset index
+      in ZGFX decoder.
+    - CVE-2022-39318: Resolve missing input validation in `urbdrc` channel.
+    - CVE-2022-39319: Resolve missing input length validation in the `urbdrc`
+      channel
+    - CVE-2022-39320: Resolve attempting integer addition on too narrow types
+      leading to allocation of a buffer too small holding the data written.
+    - CVE-2022-39347: Resolve missing path canonicalization and base path check
+      for `drive` channel.
+    - CVE-2022-41877: Resolv missing input length validation in `drive` channel.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Mon, 28 Nov 2022 08:53:31 +0100
+
 freerdp2 (2.8.1+dfsg1-1) unstable; urgency=medium
 
   * New upstream release. (Closes: #1021659).
