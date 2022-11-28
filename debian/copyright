@@ -306,6 +306,8 @@ Files: .clang-format
  winpr/libwinpr/crt/test/TestTypes.c
  winpr/libwinpr/crt/test/TestUnicodeConversion.c
  winpr/libwinpr/crypto/ModuleOptions.cmake
+ winpr/libwinpr/crypto/hmac_md5.c
+ winpr/libwinpr/crypto/hmac_md5.h
  winpr/libwinpr/crypto/test/CMakeLists.txt
  winpr/libwinpr/crypto/test/TestCryptoCertEnumCertificatesInStore.c
  winpr/libwinpr/crypto/test/TestCryptoCipher.c
@@ -1908,6 +1910,13 @@ Files: channels/audin/client/opensles/opensl_io.c
 Copyright: 2012, Victor Lazzarini
 License: BSD-3-clause
 
+Files: winpr/libwinpr/crypto/md4.c
+ winpr/libwinpr/crypto/md4.h
+ winpr/libwinpr/crypto/md5.c
+ winpr/libwinpr/crypto/md5.h
+Copyright: 2001, Alexander Peslyak and it is hereby released to the
+License: public-domain
+
 Files: include/freerdp/codec/rfx.h
  libfreerdp/codec/nsc_encode.c
  libfreerdp/codec/nsc_encode.h
@@ -3005,7 +3014,7 @@ License: BSD-3-clause
 
 Files: debian/*
 Copyright: 2015-2018, Bernhard Miklautz <bernhard.miklautz@thincast.com>
-  2016, Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+  2016-2022, Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
 License: Apache-2.0 or BSD-2-clause or BSD-3-clause or BSL-1.0 or Expat or ISC or X11 or zlib/libpng or public-domain
 
 License: Apache-2.0
