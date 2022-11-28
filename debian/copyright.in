@@ -835,6 +835,8 @@ Files: CMakeCPack.cmake
  winpr/libwinpr/crt/test/TestTypes.c
  winpr/libwinpr/crt/test/TestUnicodeConversion.c
  winpr/libwinpr/crypto/ModuleOptions.cmake
+ winpr/libwinpr/crypto/hmac_md5.c
+ winpr/libwinpr/crypto/hmac_md5.h
  winpr/libwinpr/crypto/test/CMakeLists.txt
  winpr/libwinpr/crypto/test/TestCryptoCertEnumCertificatesInStore.c
  winpr/libwinpr/crypto/test/TestCryptoCipher.c
@@ -1880,6 +1882,14 @@ Files: channels/audin/client/opensles/opensl_io.c
  channels/rdpsnd/client/opensles/opensl_io.h
 Copyright: 2012, Victor Lazzarini
 License: BSD 3-clause "New" or "Revised" License
+ FIXME
+
+Files: winpr/libwinpr/crypto/md4.c
+ winpr/libwinpr/crypto/md4.h
+ winpr/libwinpr/crypto/md5.c
+ winpr/libwinpr/crypto/md5.h
+Copyright: 2001, Alexander Peslyak and it is hereby released to the
+License: Public domain
  FIXME
 
 Files: include/freerdp/codec/rfx.h
@@ -2961,11 +2971,6 @@ License: BSD 2-clause "Simplified" License
 Files: cmake/Findlibusb-1.0.cmake
 Copyright: 2006, Andreas Schneider <mail@cynapses.org>
   2008, Kyle Machulis <kyle@nonpolynomial.com>
-License: BSD 3-clause "New" or "Revised" License
- FIXME
-
-Files: cmake/ios.toolchain.cmake
-Copyright: 2014, Bogdan Cristea and LTE Engineering Software,
 License: BSD 3-clause "New" or "Revised" License
  FIXME
 
