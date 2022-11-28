@@ -268,6 +268,7 @@ libfreerdp2.so.2 libfreerdp2-2 #MINVER#
  freerdp_get_param_string@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
  freerdp_get_param_uint32@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
  freerdp_get_param_uint64@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
+ freerdp_get_state@Base 2.9.0+dfsg1
  freerdp_get_stats@Base 2.1.0+dfsg1
  freerdp_get_system_locale_id@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
  freerdp_get_system_locale_name_from_id@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
@@ -362,6 +363,7 @@ libfreerdp2.so.2 libfreerdp2-2 #MINVER#
  freerdp_settings_set_uint64@Base 2.1.0+dfsg1
  freerdp_settings_set_value_for_name@Base 2.1.0+dfsg1
  freerdp_shall_disconnect@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
+ freerdp_state_string@Base 2.9.0+dfsg1
  freerdp_static_channel_clone@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
  freerdp_static_channel_collection_add@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
  freerdp_static_channel_collection_find@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
