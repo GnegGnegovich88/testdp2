@@ -1,8 +1,32 @@
-freerdp2 (2.10.0+dfsg1-1) UNRELEASED; urgency=medium
+freerdp2 (2.10.0+dfsg1-1) unstable; urgency=medium
 
   * New upstream release.
+    - Fix android build scripts, use CMake from SDK.
+    - Fix connection negotiation with mstsc/msrdc.
+    - [ntlm]: use rfc5929 binding hash algorithm.
+    - [channels,printer] Fixed reference counting.
+    - Fix uwac pixman.
+    - Fix Rdp security.
+    - [client,x11] Detect key autorepeat.
+    - [build] add channel path to RPATH.
+    - Fix build with BUILTIN_CHANNELS=OFF.
+    - revert changes so that the osmajortype/osminortype is not overwritten.
+    - [uwac] do not use iso C functions.
+    - [winpr,sam] fix inalid NULL arguments.
+    - Fix incompatible function pointer types.
+    - Ignore data PDUs for DVCs that were not opened successfully.
+    - [channel,urbdrc] fix type of usb hotplug callback.
+    - Extended info enforce limits.
+    - [core] add missing redirection fields.
+  * debian/control:
+    + Bump Standards-Version: to 4.6.2. No changes needed.
+  * debian/copyright:
+    + Update copyright attributions.
+    + Update auto-generated copyright.in file.
+  * debian/libfreerdp2-2.symbols:
+    + Update symbols.
 
- -- Mike Gabriel <sunweaver@debian.org>  Sun, 26 Feb 2023 21:50:20 +0100
+ -- Mike Gabriel <sunweaver@debian.org>  Sun, 26 Feb 2023 21:59:16 +0100
 
 freerdp2 (2.9.0+dfsg1-1) unstable; urgency=medium
 
