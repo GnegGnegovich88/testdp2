@@ -43,7 +43,7 @@ Build-Depends:
  uuid-dev,
  xmlto,
  xsltproc,
-Standards-Version: 4.6.1
+Standards-Version: 4.6.2
 Rules-Requires-Root: no
 Homepage: https://www.freerdp.com/
 Vcs-Browser: https://salsa.debian.org/debian-remote-team/freerdp2
