@@ -121,6 +121,7 @@ struct uwac_display
 	bool running;
 	UwacTask dispatch_fd_task;
 	uint32_t serial;
+	uint32_t pointer_focus_serial;
 
 	struct wl_list windows;
 
@@ -237,8 +238,8 @@ struct uwac_window
 
 	struct wl_region* opaque_region;
 	struct wl_region* input_region;
-	SSIZE_T drawingBufferIdx;
-	SSIZE_T pendingBufferIdx;
+	ssize_t drawingBufferIdx;
+	ssize_t pendingBufferIdx;
 	struct wl_surface* surface;
 	struct wl_shell_surface* shell_surface;
 	struct xdg_surface* xdg_surface;
