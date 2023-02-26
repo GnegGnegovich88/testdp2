@@ -859,6 +859,7 @@ Files: channels/CMakeLists.txt
  winpr/include/winpr/credui.h
  winpr/include/winpr/crt.h
  winpr/include/winpr/crypto.h
+ winpr/include/winpr/custom-crypto.h
  winpr/include/winpr/dsparse.h
  winpr/include/winpr/endian.h
  winpr/include/winpr/error.h
@@ -895,6 +896,7 @@ Files: channels/CMakeLists.txt
  winpr/include/winpr/thread.h
  winpr/include/winpr/timezone.h
  winpr/include/winpr/tools/makecert.h
+ winpr/include/winpr/wincrypt.h
  winpr/include/winpr/windows.h
  winpr/include/winpr/winhttp.h
  winpr/include/winpr/winpr.h
@@ -1140,6 +1142,7 @@ Files: channels/audin/client/mac/CMakeLists.txt
  include/freerdp/channels/urbdrc.h
  include/freerdp/server/server-common.h
  include/freerdp/utils/cliprdr_utils.h
+ include/freerdp/utils/string.h
  libfreerdp/cache/bitmap.h
  libfreerdp/cache/brush.h
  libfreerdp/cache/cache.h
@@ -1157,6 +1160,7 @@ Files: channels/audin/client/mac/CMakeLists.txt
  libfreerdp/crypto/test/TestKnownHosts.c
  libfreerdp/gdi/test/helpers.c
  libfreerdp/gdi/test/helpers.h
+ libfreerdp/utils/string.c
  scripts/test-scard.cpp
  winpr/include/winpr/assert.h
  winpr/include/winpr/debug.h
