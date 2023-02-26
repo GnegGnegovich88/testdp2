@@ -111,6 +111,7 @@ libfreerdp2.so.2 libfreerdp2-2 #MINVER#
  crypto_cert_get_dns_names@Base 2.0.0~git20181120.1.e21b72c95+dfsg1
  crypto_cert_get_email@Base 2.0.0~git20181120.1.e21b72c95+dfsg1
  crypto_cert_get_public_key@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
+ crypto_cert_get_signature_alg@Base 2.10.0+dfsg1
  crypto_cert_get_upn@Base 2.0.0~git20181120.1.e21b72c95+dfsg1
  crypto_cert_hash@Base 2.1.0+dfsg1
  crypto_cert_issuer@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
@@ -368,6 +369,7 @@ libfreerdp2.so.2 libfreerdp2-2 #MINVER#
  freerdp_static_channel_collection_add@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
  freerdp_static_channel_collection_find@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
  freerdp_static_channel_collection_free@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
+ freerdp_target_net_addresses_copy@Base 2.10.0+dfsg1
  freerdp_target_net_addresses_free@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
  freerdp_update_gateway_usage_method@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
  gdi_BitBlt@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
@@ -550,6 +552,7 @@ libfreerdp2.so.2 libfreerdp2-2 #MINVER#
  progressive_decompress_ex@Base 2.3.0+dfsg1
  progressive_delete_surface_context@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
  rail_read_unicode_string@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
+ rdp_redirection_flags_to_string@Base 2.10.0+dfsg1
  rectangle_is_empty@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
  rectangles_equal@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
  rectangles_intersection@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
