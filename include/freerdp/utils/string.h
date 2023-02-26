@@ -1,9 +1,10 @@
 /**
  * FreeRDP: A Remote Desktop Protocol Implementation
- * Terminal Server Gateway (utils)
  *
- * Copyright 2021 Armin Novak <armin.novak@thincast.com>
- * Copyright 2021 Thincast Technologies GmbH
+ * String Utils - Helper functions converting something to string
+ *
+ * Copyright 2022 Armin Novak <armin.novak@thincast.com>
+ * Copyright 2022 Thincast Technologies GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +19,21 @@
  * limitations under the License.
  */
 
-#ifndef FREERDP_LIB_CORE_UTILS_H
-#define FREERDP_LIB_CORE_UTILS_H
+#ifndef FREERDP_UTILS_STRING_H
+#define FREERDP_UTILS_STRING_H
 
-#include <winpr/winpr.h>
-#include <freerdp/freerdp.h>
+#include <freerdp/api.h>
+#include <freerdp/types.h>
 
-BOOL utils_reset_abort(rdpContext* context);
-BOOL utils_abort_connect(rdpContext* context);
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
-BOOL utils_str_is_empty(const char* str);
-BOOL utils_str_copy(const char* value, char** dst);
+	FREERDP_API char* rdp_redirection_flags_to_string(UINT32 flags, char* buffer, size_t size);
 
-#endif /* FREERDP_LIB_CORE_UTILS_H */
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* FREERDP_UTILS_STRING_H */
