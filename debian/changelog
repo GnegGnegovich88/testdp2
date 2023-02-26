@@ -1,3 +1,9 @@
+freerdp2 (2.10.0+dfsg1-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Mike Gabriel <sunweaver@debian.org>  Sun, 26 Feb 2023 21:50:20 +0100
+
 freerdp2 (2.9.0+dfsg1-1) unstable; urgency=medium
 
   * New upstream release. (Closes: #1024511).
