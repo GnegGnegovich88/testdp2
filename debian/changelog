@@ -1,3 +1,12 @@
+freerdp2 (2.10.0+dfsg1-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * debian/patches/0001_fix_ftbfs_1041377.patch:
+    - include upstream fix for FTBFS with FFmpeg 6.0
+      (Closes: #1041377)
+
+ -- Héctor Orón Martínez <zumbi@debian.org>  Fri, 04 Aug 2023 04:08:40 -0400
+
 freerdp2 (2.10.0+dfsg1-1) unstable; urgency=medium
 
   * New upstream release.
