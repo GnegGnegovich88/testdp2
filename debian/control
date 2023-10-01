@@ -17,6 +17,7 @@ Build-Depends:
  libgsm1-dev,
  libicu-dev,
  libjpeg-dev,
+ libkrb5-dev,
  libpam0g-dev,
  libpcsclite-dev,
  libpulse-dev,
