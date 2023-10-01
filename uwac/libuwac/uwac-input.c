@@ -846,12 +846,37 @@ static void pointer_handle_axis(void* data, struct wl_pointer* pointer, uint32_t
 
 static void pointer_frame(void* data, struct wl_pointer* wl_pointer)
 {
-	/*UwacSeat *seat = data;*/
+	UwacPointerFrameEvent* event;
+	UwacSeat* seat = data;
+	UwacWindow* window = seat->pointer_focus;
+
+	if (!window)
+		return;
+
+	event = (UwacPointerFrameEvent*)UwacDisplayNewEvent(seat->display, UWAC_EVENT_POINTER_FRAME);
+	if (!event)
+		return;
+
+	event->seat = seat;
+	event->window = window;
 }
 
 static void pointer_axis_source(void* data, struct wl_pointer* wl_pointer, uint32_t axis_source)
 {
-	/*UwacSeat *seat = data;*/
+	UwacPointerSourceEvent* event;
+	UwacSeat* seat = data;
+	UwacWindow* window = seat->pointer_focus;
+
+	if (!window)
+		return;
+
+	event = (UwacPointerSourceEvent*)UwacDisplayNewEvent(seat->display, UWAC_EVENT_POINTER_SOURCE);
+	if (!event)
+		return;
+
+	event->seat = seat;
+	event->window = window;
+	event->axis_source = axis_source;
 }
 
 static void pointer_axis_stop(void* data, struct wl_pointer* wl_pointer, uint32_t time,

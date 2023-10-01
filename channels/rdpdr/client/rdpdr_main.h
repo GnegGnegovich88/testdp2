@@ -42,15 +42,33 @@
 #include <CoreServices/CoreServices.h>
 #endif
 
-#define TAG CHANNELS_TAG("rdpdr.client")
+#if !defined(Stream_CheckAndLogRequiredLengthWLog)
+#define Stream_CheckAndLogRequiredLengthWLog(log, s, len)                                     \
+	Stream_CheckAndLogRequiredLengthWLogEx(log, WLOG_WARN, s, len, "%s(%s:%d)", __FUNCTION__, \
+	                                       __FILE__, __LINE__)
+#endif
 
 typedef struct rdpdr_plugin rdpdrPlugin;
+
+enum RDPDR_CHANNEL_STATE
+{
+	RDPDR_CHANNEL_STATE_INITIAL = 0,
+	RDPDR_CHANNEL_STATE_ANNOUNCE,
+	RDPDR_CHANNEL_STATE_ANNOUNCE_REPLY,
+	RDPDR_CHANNEL_STATE_NAME_REQUEST,
+	RDPDR_CHANNEL_STATE_SERVER_CAPS,
+	RDPDR_CHANNEL_STATE_CLIENT_CAPS,
+	RDPDR_CHANNEL_STATE_CLIENTID_CONFIRM,
+	RDPDR_CHANNEL_STATE_READY,
+	RDPDR_CHANNEL_STATE_USER_LOGGEDON
+};
 
 struct rdpdr_plugin
 {
 	CHANNEL_DEF channelDef;
 	CHANNEL_ENTRY_POINTS_FREERDP_EX channelEntryPoints;
 
+	enum RDPDR_CHANNEL_STATE state;
 	HANDLE thread;
 	wStream* data_in;
 	void* InitHandle;
@@ -78,8 +96,10 @@ struct rdpdr_plugin
 	HANDLE stopEvent;
 #endif
 	rdpContext* rdpcontext;
+	wLog* log;
 };
 
+BOOL rdpdr_state_advance(rdpdrPlugin* rdpdr, enum RDPDR_CHANNEL_STATE next);
 UINT rdpdr_send(rdpdrPlugin* rdpdr, wStream* s);
 
 #endif /* FREERDP_CHANNEL_RDPDR_CLIENT_MAIN_H */

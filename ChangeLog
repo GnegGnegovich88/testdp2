@@ -1,6 +1,42 @@
+# 2023-09-20 Version 2.11.2
+
+Notworthy changes:
+* Backported #9378: backported wArrayList (optional) copy on insert
+* Backported #9360: backported certificate algorithm detection
+
+For a complete and detailed change log since the last release run:
+git log 2.11.2..2.11.1
+
+# 2023-09-04 Version 2.11.1
+
+Notworthy changes:
+* Backported #9356: Fix issues with order updates
+
+For a complete and detailed change log since the last release run:
+git log 2.11.1..2.11.0
+
+# 2023-08-28 Version 2.11.0
+
+Noteworthy changes:
+* Various input validation fixes
+* Added various CMake options #9317
+* LibreSSL build fixes #8709
+
+Fixed issues:
+* Backported #9233: Big endian support
+* Backported #9099: Mouse grabbing support
+* Backported #6851: wayland scrolling fix
+* Backported #8690: Update h264 to use new FFMPEG API
+* Backported #7306: early bail from update_read_window_state_order breaks protocol
+* Backported #8903: rdpecam/server: Remove wrong assertion
+* Backported #8994: bounds checks for gdi/gfx rectangles
+* Backported #9023: enforce rdpdr client side state checks
+* Backported #6331: deactivate mouse grabbing by default
+* Cherry-pick out of #9172: channels/cliprdr: Fix writing incorrect PDU type for unlock PDUs
+
 # 2023-02-16 Version 2.10.0
 
-Notewhorth changes:
+Noteworthy changes:
 * Fix android build scripts, use CMake from SDK
 * Fix connection negotiation with mstsc/msrdc #8426
 * [ntlm]: use rfc5929 binding hash algorithm #8430
@@ -23,7 +59,7 @@ Fixed issues:
 
 # 2022-11-16 Version 2.9.0
 
-Notewhorth changes:
+Noteworthy changes:
 * Backported #8252: Support sending server redirection PDU
 * Backported #8406: Ensure X11 client cursor is never smaller 1x1
 * Backported #8403: Fixed multiple client side input validation issues
@@ -49,7 +85,7 @@ git log 2.8.1..2.9.0
 
 # 2022-10-12 Version 2.8.1
 
-Notewhorth changes:
+Noteworthy changes:
 * Fixed CVE-2022-39282
 * Fixed CVE-2022-39283
 * Added missing commit for backported #8041: Remove ALAW/ULAW codecs from linux backends (unreliable)

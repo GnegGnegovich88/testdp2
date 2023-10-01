@@ -950,10 +950,12 @@ WINPR_MD_TYPE crypto_cert_get_signature_alg(X509* xcert)
 {
 	WINPR_ASSERT(xcert);
 
-	const int nid = X509_get_signature_nid(xcert);
+	EVP_PKEY* evp = X509_get0_pubkey(xcert);
+	WINPR_ASSERT(evp);
 
 	int hash_nid = 0;
-	if (OBJ_find_sigid_algs(nid, &hash_nid, NULL) != 1)
+	const int res = EVP_PKEY_get_default_digest_nid(evp, &hash_nid);
+	if (res <= 0)
 		return WINPR_MD_NONE;
 
 	switch (hash_nid)
@@ -976,7 +978,7 @@ WINPR_MD_TYPE crypto_cert_get_signature_alg(X509* xcert)
 			return WINPR_MD_SHA512;
 		case NID_ripemd160:
 			return WINPR_MD_RIPEMD160;
-#if (OPENSSL_VERSION_NUMBER >= 0x1010101fL) || defined(LIBRESSL_VERSION_NUMBER)
+#if (OPENSSL_VERSION_NUMBER >= 0x1010101fL) && !defined(LIBRESSL_VERSION_NUMBER)
 		case NID_sha3_224:
 			return WINPR_MD_SHA3_224;
 		case NID_sha3_256:
@@ -985,11 +987,11 @@ WINPR_MD_TYPE crypto_cert_get_signature_alg(X509* xcert)
 			return WINPR_MD_SHA3_384;
 		case NID_sha3_512:
 			return WINPR_MD_SHA3_512;
-#endif
 		case NID_shake128:
 			return WINPR_MD_SHAKE128;
 		case NID_shake256:
 			return WINPR_MD_SHAKE256;
+#endif
 		case NID_undef:
 		default:
 			return WINPR_MD_NONE;
