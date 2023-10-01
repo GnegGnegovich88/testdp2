@@ -1,8 +1,42 @@
-freerdp2 (2.11.2+dfsg1-1) UNRELEASED; urgency=medium
+freerdp2 (2.11.2+dfsg1-1) unstable; urgency=medium
 
-  * New upstream release.
+  * New upstream release. (Closes: #1051638).
+  * Fixed security issues since v2.11.0:
+    - CVE-2023-40589: [codec,ncrush] fix index checks properly verify all
+      offsets while decoding data.
+    - CVE-2023-40567: Fix out-of-bounds write in the
+      `clear_decompress_bands_data` function.
+    - CVE-2023-40188: Fix out-of-bounds read in the `general_LumaToYUV444`
+      function.
+    - CVE-2023-40186: Fix out-of-bounds write in the `gdi_CreateSurface`
+      function.
+    - CVE-2023-40181: Fix out-of-bounds read in the `zgfx_decompress_segment`
+      function.
+    - CVE-2023-39356: Fix out-of-bounds read in the `gdi_multi_opaque_rect`
+      function.
+    - CVE-2023-39355: Fix use-after-free in processing
+      `RDPGFX_CMDID_RESETGRAPHICS` packets.
+    - CVE-2023-39354: Fix out-of-bounds read in the `nsc_rle_decompress_data`
+      function.
+    - CVE-2023-39353: Fix missing offset validation leading to out-of-bounds
+      read in the `libfreerdp/codec/rfx.c` file.
+    - CVE-2023-39352: Fix invalid offset validation leading to out-of-bounds
+      write.
+    - CVE-2023-39351: Fix null-pointer-dereference leading a crash in the
+      RemoteFX (rfx) handling.
+    - CVE-2023-39350: Fix integer underflow leading to DOS (e.g. abort due to
+      `WINPR_ASSERT` with default compilation flags).
+  * debian/patches:
+    + Drop 0001_fix_ftbfs_1041377.patch. Applied upstream.
+  * debian/control:
+    + Add B-D: libkrb5-dev.
+  * debian/rules:
+    + Add -DWITH_KERBEROS=ON configure option. (Closes: #1036095).
+  * debian/watch:
+    + Rework file. Find all released versions of freerdp2. (Closes: #1053317).
+      Thanks to Tobias Frost for sending a patch.
 
- -- Mike Gabriel <sunweaver@debian.org>  Sun, 01 Oct 2023 23:17:37 +0200
+ -- Mike Gabriel <sunweaver@debian.org>  Sun, 01 Oct 2023 23:21:15 +0200
 
 freerdp2 (2.10.0+dfsg1-1.1) unstable; urgency=medium
 
