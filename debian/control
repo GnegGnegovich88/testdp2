@@ -40,7 +40,7 @@ Build-Depends:
  libxrender-dev,
  libxtst-dev,
  libxv-dev,
- pkg-config,
+ pkgconf,
  uuid-dev,
  xmlto,
  xsltproc,
