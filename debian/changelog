@@ -1,9 +1,15 @@
-freerdp2 (2.11.5+dfsg1-1) UNRELEASED; urgency=medium
+freerdp2 (2.11.5+dfsg1-1) unstable; urgency=medium
 
   * New upstream release.
+    - CVE-2024-22211: Fix integer overflow in progressive decoder. (Closes:
+      #1061173).
   * Upload time_t64 changes to unstable. (Closes: #1061952).
+  * debian/watch:
+    + Adjust so we only see 2.x release.
+  * debian/control:
+    + Switch from pkg-config to pkgconf. Thanks, lintian.
 
- -- Mike Gabriel <sunweaver@debian.org>  Mon, 25 Mar 2024 16:06:02 +0100
+ -- Mike Gabriel <sunweaver@debian.org>  Mon, 25 Mar 2024 16:09:04 +0100
 
 freerdp2 (2.11.2+dfsg1-1.1~exp2) experimental; urgency=medium
 
