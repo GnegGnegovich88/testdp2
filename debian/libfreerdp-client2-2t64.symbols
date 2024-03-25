@@ -1,4 +1,4 @@
-libfreerdp-client2.so.2 libfreerdp-client2-2 #MINVER#
+libfreerdp-client2.so.2 libfreerdp-client2-2t64 #MINVER#
 * Build-Depends-Package: freerdp2-dev
  add_device@Base 2.1.0+dfsg1
  client_auto_reconnect@Base 2.0.0~git20181120.1.e21b72c95+dfsg1

@@ -1,4 +1,4 @@
-libfreerdp-server2.so.2 libfreerdp-server2-2 #MINVER#
+libfreerdp-server2.so.2 libfreerdp-server2-2t64 #MINVER#
 * Build-Depends-Package: freerdp2-dev
  ainput_server_context_free@Base 2.6.0+dfsg1
  ainput_server_context_new@Base 2.6.0+dfsg1

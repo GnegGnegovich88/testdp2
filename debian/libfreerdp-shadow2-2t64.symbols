@@ -1,4 +1,4 @@
-libfreerdp-shadow2.so.2 libfreerdp-shadow2-2 #MINVER#
+libfreerdp-shadow2.so.2 libfreerdp-shadow2-2t64 #MINVER#
 * Build-Depends-Package: freerdp2-dev
  shadow_capture_align_clip_rect@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
  shadow_capture_compare@Base 2.0.0~git20160317.1.75ae3f5+dfsg1
