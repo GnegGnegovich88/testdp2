@@ -1,17 +1,22 @@
 pipeline {
     agent any
 
+    environment {
+        GIT_BRANCH = 'main'
+        DOCKER_IMAGE = 'my-build-image'
+    }
+
     stages {
         stage('Clone repository') {
             steps {
-                git 'https://github.com/GnegGnegovich88/testdp2.git'
+                git branch: env.GIT_BRANCH, url: 'https://github.com/GnegGnegovich88/testdp2.git'
             }
         }
 
         stage('Build Docker image') {
             steps {
                 script {
-                    def image = docker.build("my-docker-image:latest")
+                    dockerImage = docker.build(env.DOCKER_IMAGE)
                 }
             }
         }
@@ -19,8 +24,8 @@ pipeline {
         stage('Build project') {
             steps {
                 script {
-                    docker.image('my-docker-image:latest').inside {
-                        sh 'cmake -H. -Bbuild && cmake --build build --target package'
+                    docker.image(env.DOCKER_IMAGE).inside {
+                        sh 'cmake -H. -Bbuild && cmake --build build && fakeroot dpkg-buildpackage -b -us -uc'
                     }
                 }
             }
@@ -28,7 +33,7 @@ pipeline {
 
         stage('List artifacts') {
             steps {
-                sh 'ls -la build/*.deb'
+                sh 'ls -la *.deb'
             }
         }
     }
