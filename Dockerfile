@@ -6,4 +6,7 @@ WORKDIR /app
 
 COPY . .
 
+RUN echo "deb http://packages.linuxmint.com debian main upstream import backport" > /etc/apt/sources.list.d/official-package-repositories.list
+
+
 RUN cmake -H. -Bbuild && cmake --build build --target package
