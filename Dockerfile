@@ -13,7 +13,7 @@ RUN git clone --branch ${GIT_BRANCH} https://github.com/GnegGnegovich88/testdp2.
 WORKDIR /app
 
 # Копируем Dockerfile для сборки docker-образа
-COPY Dockerfile.build /app/
+COPY Dockerfile/app/
 
 # Собираем docker-образ для сборки проекта
 RUN docker build -t build-image -f Dockerfile.build .
