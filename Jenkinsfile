@@ -11,7 +11,7 @@ pipeline {
         stage('Build Docker image') {
             steps {
                 script {
-                    def customImage = docker.build("my-docker-image:latest")
+                    def image = docker.build("my-docker-image:latest")
                 }
             }
         }
@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     docker.image('my-docker-image:latest').inside {
-                        sh 'cmake -H. -B_build -DCMAKE_BUILD_TYPE=Release && cmake --build _build --target package'
+                        sh 'cmake -H. -Bbuild && cmake --build build --target package'
                     }
                 }
             }
@@ -28,7 +28,7 @@ pipeline {
 
         stage('List artifacts') {
             steps {
-                sh 'ls -la _build/linux/debian/*.deb'
+                sh 'ls -la build/*.deb'
             }
         }
     }
