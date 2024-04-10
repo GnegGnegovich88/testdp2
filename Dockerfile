@@ -1,4 +1,4 @@
-# Выбираем базовый образ 
+# Выбираем базовый образ
 FROM ubuntu:20.04
 
 # Устанавливаем необходимые зависимости для сборки
@@ -13,7 +13,7 @@ RUN git clone --branch ${GIT_BRANCH} https://github.com/GnegGnegovich88/testdp2.
 WORKDIR /app
 
 # Копируем Dockerfile для сборки docker-образа
-COPY Dockerfile /app/
+COPY Dockerfile.build /app/
 
 # Собираем docker-образ для сборки проекта
 RUN docker build -t build-image -f Dockerfile.build .
